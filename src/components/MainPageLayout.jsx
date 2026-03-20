@@ -1,10 +1,16 @@
+//IMPORTS
+import AppHeader from "./AppHeader"
+import AppFooter from "./AppFooter"
+import { Outlet } from "react-router-dom"
 export function MainPageLayout() {
 
 
 
     return (
         <>
-            COMPONENTE DI BASE.
+            <AppHeader />
+            <Outlet />
+            <AppFooter />
         </>
     )
 }
