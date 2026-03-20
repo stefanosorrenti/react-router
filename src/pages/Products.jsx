@@ -35,7 +35,8 @@ export default function Products() {
         /* Card sction */
         <section>
             {/* Title */}
-            <h1 className="text-white text-center m-5">I più venduti</h1>
+            <h1 className="text-white text-center m-5 mb-3">I più venduti.</h1>
+            <p className="fs-5 text-center mb-5 text-dark-emphasis">Scopri i nostri articoli più venduti! </p>
 
             <div className="container">
                 <div className="row gap-3 justify-content-center">

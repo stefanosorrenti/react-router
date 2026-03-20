@@ -1,15 +1,20 @@
-export default function AppCard({cardId, cardImg, cardTitle, cardCategory, cardDescrption, cardPrice}) {
+export default function AppCard({ cardId, cardImg, cardTitle, cardCategory, cardDescrption, cardPrice }) {
 
 
 
     return (
 
         /* Sigle Card */
-        <div key={cardId} className="card cards-sizing col-12 col-md-6 col-lg-4 bg-light ">
+        <div key={cardId} className="card cards-sizing col-12 col-md-6 col-lg-4 bg-light position-relative">
 
             {/* Images */}
             <div className="img-box container my-3">
                 <img src={cardImg} alt="" className="card-img-top" />
+                <img
+                    className="product-logo"
+                    src="https://media.licdn.com/dms/image/v2/D4D12AQGgquqlg98JKg/article-cover_image-shrink_720_1280/B4DZfGluLrG8AQ-/0/1751383467360?e=2147483647&v=beta&t=m_8eGKPxUO4gohM9Z4-svx6NIGZCOyfJhLY3tXNTkrk"
+                    alt=""
+                />
             </div>
 
             {/* Card Body */}

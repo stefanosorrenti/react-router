@@ -19,6 +19,8 @@ body {
 
 }
 
+
+
 /*--------HEADER--------*/
 
 /* Navbar */
@@ -114,6 +116,14 @@ figcaption {
 
 div.cards-sizing button {
     min-width: 65%;
+}
+
+img.product-logo  {
+    max-width: 50px;
+    max-height: 50px;
+    position: absolute;
+    top: 2%;
+    left:2%
 }
 
 
