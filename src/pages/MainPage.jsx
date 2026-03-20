@@ -2,9 +2,9 @@ export default function MainPage() {
 
 
     return (
-        <>
-            {/* Jumbotron */}
-            <div className="jumbotron pt-5">
+        
+            
+            <main className="home-page py-5">
                 <div className="container">
 
                     {/* Title */}
@@ -19,7 +19,7 @@ export default function MainPage() {
                             <div className="col-6">
 
                                 <label className="form-label fw-semibold fs-3 " htmlFor="email">Email</label>
-                                <input className="form-control form-control-sm" id="email" name="email" type="email" />
+                                <input className="form-control form-control-sm" id="email" name="email" type="email" placeholder="esempio@email.com" />
                                 <span className="form-text">Inserisci qui la tua email.</span>
 
                             </div>
@@ -28,7 +28,7 @@ export default function MainPage() {
                             <div className="col-6">
 
                                 <label className="form-label fw-semibold fs-3 " htmlFor="password">Password</label>
-                                <input className="form-control form-control-sm" type="password" name="password" id="password" />
+                                <input className="form-control form-control-sm" type="password" name="password" id="password" placeholder="password..." />
                                 <span className="form-text">Inserisci qui la tua password</span>
                             </div>
 
@@ -45,7 +45,7 @@ export default function MainPage() {
                     </section>
 
                     {/* Socials list */}
-                    <ul className="mt-3">
+                    <ul className="m-0 p-3">
                         <li><i class="bi bi-instagram"></i></li>
                         <li><i class="bi bi-facebook"></i></li>
                         <li><i class="bi bi-youtube"></i></li>
@@ -54,7 +54,7 @@ export default function MainPage() {
                     </ul>
 
                 </div>
-            </div>
-        </>
+            </main>
+        
     )
 }

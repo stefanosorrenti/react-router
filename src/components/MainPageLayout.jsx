@@ -10,7 +10,7 @@ export function MainPageLayout() {
         <>
             <AppHeader />
             <Outlet />
-            <AppFooter />
+            {/* <AppFooter /> */}
         </>
     )
 }
