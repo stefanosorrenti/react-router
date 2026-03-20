@@ -33,30 +33,44 @@ export default function Products() {
 
         /* Card sction */
         <section>
-
+            {/* Title */}
             <h1>I nostri bestseller</h1>
+
             <div className="container">
                 <div className="row">
-                    <div className="card">
-                        <img src={products[0].image} alt="" className="card-img-top" />
 
-                        <div className="card-body">
-                            <h2 className="card-title">Prodotto</h2>
-                            <span>Categoria</span>
-                            <p className="card-text">Descrizione prodotti</p>
+                    {/* Dynamic Cards render */}
+                    {products.map(product => (
+                        
+                        /* Sigle Card */
+                        <div key={product.id} className="card col-12 col-md-6 col-lg-3 col-xl-2">
+
+                            {/* Images */}
+                            <div className="img-box">
+                                <img src={product.image} alt="" className="card-img-top" />
+                            </div>
+
+                            {/* Card Body */}
+                            <div className="card-body">
+                                <h2 className="card-title">{product.title}</h2>
+                                <span>{product.category.toUpperCase()}</span>
+                                <p className="card-text">{product.description}</p>
+                            </div>
+
+                            {/* Card footer */}
+                            <div className="card-footer">
+                                <ul className="list-group">
+                                    <li className="list-group-item">€{product.price.toFixed(2)}</li>
+                                    <li className="list-group-item">rating</li>
+                                </ul>
+
+                                {/* Buy button */}
+                                <button>Acquista</button>
+                            </div>
+
+
                         </div>
-
-                        <div className="card-footer">
-                            <ul className="list-group">
-                                <li className="list-group-item">prezzo</li>
-                                <li className="list-group-item"> rating</li>
-                            </ul>
-
-                            <button>Acquista</button>
-                        </div>
-
-
-                    </div>
+                    ))}
                 </div>
             </div>
 
