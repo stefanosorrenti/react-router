@@ -1,10 +1,11 @@
+import { MainPageLayout } from "./components/MainPageLayout"
 
 function App() {
 
 
   return (
     <>
-     <h1>PROVA</h1>
+     <MainPageLayout />
     </>
   )
 }
