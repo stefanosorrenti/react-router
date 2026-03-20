@@ -35,10 +35,10 @@ export default function Products() {
         /* Card sction */
         <section>
             {/* Title */}
-            <h1>I nostri bestseller</h1>
+            <h1 className="text-white text-center m-5">I più venduti</h1>
 
             <div className="container">
-                <div className="row">
+                <div className="row gap-3 justify-content-center">
 
                     {/* Dynamic Cards render */}
                     {products.map(product => (
@@ -46,7 +46,7 @@ export default function Products() {
                         /* AppCard component */
                         <AppCard cardId={product.id} cardImg={product.image}
                             cardTitle={product.title} cardCategory={product.category}
-                            cardDescrption={product.descption} cardPrice={product.price}
+                            cardDescrption={product.description} cardPrice={product.price}
                         />
                     ))}
                 </div>
