@@ -1,3 +1,55 @@
 /* IMPOTS */
 @import url('bootstrap');
 @import url('bootstrap-icons');
+
+
+/*--------GENERICS--------*/
+img {
+    max-width: 100%;
+}
+
+/*--------UTILITY--------*/
+
+/*--------HEADER--------*/
+
+/* Navbar */
+
+.navbar-brand img {
+    width: 150px;
+    border-radius: 10px;
+    
+}
+
+
+/*--------MAIN--------*/
+
+/* Jumbotron */
+
+h1 {
+    font-size: 50px;
+}
+
+.jumbotron {
+    text-align: center;
+    background-image: url(https://images.unsplash.com/photo-1664455340023-214c33a9d0bd?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZSUyMGNvbW1lcmNlfGVufDB8fDB8fHww);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 400px; 
+}
+
+.jumbotron .container {
+    /* border: 2px solid black; */
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 3px 1px;
+}
+
+/* Socials */
+.container ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 30px;
+}
+/*--------FOOTER--------*/
