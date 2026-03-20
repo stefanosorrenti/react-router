@@ -1,7 +1,7 @@
 //IMPORTS
-import axios from "axios"
-import { useState } from "react"
-import { useEffect } from "react"
+import axios from "axios";
+import { useState } from "react";
+import { useEffect } from "react";
 export default function Products() {
     //DATA
 
@@ -65,7 +65,7 @@ export default function Products() {
                                 </ul>
 
                                 {/* Buy button */}
-                                <button>Acquista</button>
+                                <button className="btn btn-primary">Acquista</button>
                             </div>
 
 

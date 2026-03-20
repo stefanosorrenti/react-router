@@ -1,3 +1,5 @@
+//IMPORT
+import { Link, NavLink } from "react-router-dom"
 export default function AppHeader() {
 
 
@@ -10,13 +12,13 @@ export default function AppHeader() {
                 {/* Navbar Item */}
                 <ul className="nav nav-pills">
                     <li className="nav-item">
-                        <a href="./info" className="nav-link">Chi siamo?</a>
+                        <Link className="nav-link" to = "/info" >Chi siamo</Link>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link active" aria-current="page">Home</a>
+                        <NavLink to="/" className="nav-link active" aria-current="page">Home</NavLink>
                     </li>
                     <li className="nav-item">
-                        <a href="./prodotti" className="nav-link">Scopri i nostri prodotti</a>
+                        <Link to="./prodotti" className="nav-link">Scopri i nostri prodotti</Link>
                     </li>
                 </ul>
 
