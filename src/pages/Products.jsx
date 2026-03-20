@@ -2,6 +2,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { useEffect } from "react";
+import AppCard from "../components/AppCard";
 export default function Products() {
     //DATA
 
@@ -41,35 +42,12 @@ export default function Products() {
 
                     {/* Dynamic Cards render */}
                     {products.map(product => (
-                        
-                        /* Sigle Card */
-                        <div key={product.id} className="card col-12 col-md-6 col-lg-3 col-xl-2">
 
-                            {/* Images */}
-                            <div className="img-box">
-                                <img src={product.image} alt="" className="card-img-top" />
-                            </div>
-
-                            {/* Card Body */}
-                            <div className="card-body">
-                                <h2 className="card-title">{product.title}</h2>
-                                <span>{product.category.toUpperCase()}</span>
-                                <p className="card-text">{product.description}</p>
-                            </div>
-
-                            {/* Card footer */}
-                            <div className="card-footer">
-                                <ul className="list-group">
-                                    <li className="list-group-item">€{product.price.toFixed(2)}</li>
-                                    <li className="list-group-item">rating</li>
-                                </ul>
-
-                                {/* Buy button */}
-                                <button className="btn btn-primary">Acquista</button>
-                            </div>
-
-
-                        </div>
+                        /* AppCard component */
+                        <AppCard cardId={product.id} cardImg={product.image}
+                            cardTitle={product.title} cardCategory={product.category}
+                            cardDescrption={product.descption} cardPrice={product.price}
+                        />
                     ))}
                 </div>
             </div>
