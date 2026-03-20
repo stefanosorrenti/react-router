@@ -11,27 +11,41 @@ export default function MainPage() {
                     <h1 className="text-center text-black py-2">Altro che amazon!</h1>
                     <p className="text-body-tertiary fw-semibold">Scopri le migliori offerte per te.</p>
 
-                    {/* LOGIN */}
+                    {/*Login section */}
 
-                    <div className="login">
-                        <form>
-                            {/* EMAIL INPUT */}
-                            <label htmlFor="email">Email</label>
-                            <input id="email" name="email" type="email" />
+                    <section>
+                        <form className="row justify-content-center flex-column align-items-center gap-3">
+                            {/* Email input */}
+                            <div className="col-6">
 
-                            {/* PASSWORD INPUT */}
-                            <label htmlFor="password">Password</label>
-                            <input type="password" name="password" id="password" />
+                                <label className="form-label fw-semibold fs-3 " htmlFor="email">Email</label>
+                                <input className="form-control form-control-sm" id="email" name="email" type="email" />
+                                <span className="form-text">Inserisci qui la tua email.</span>
 
-                            {/* LOGIN BUTTONS */}
-                            <button>Accedi</button>
-                            <button>Sei nuovo? Registrati!</button>
+                            </div>
+
+                            {/* Password input  */}
+                            <div className="col-6">
+
+                                <label className="form-label fw-semibold fs-3 " htmlFor="password">Password</label>
+                                <input className="form-control form-control-sm" type="password" name="password" id="password" />
+                                <span className="form-text">Inserisci qui la tua password</span>
+                            </div>
+
+                            {/* Login buttons */}
+                            <div className="col-12 d-flex flex-column justify-content-center align-items-center gap-2 p-3">
+
+                                <button className="btn btn-success d-block">Accedi</button>
+                                <span className="fw-semibold">o</span>
+                                <button className="btn btn-danger">Sei nuovo? Registrati!</button>
+
+                            </div>
 
                         </form>
-                    </div>
+                    </section>
 
-                    {/* Socials */}
-                    <ul>
+                    {/* Socials list */}
+                    <ul className="mt-3">
                         <li><i class="bi bi-instagram"></i></li>
                         <li><i class="bi bi-facebook"></i></li>
                         <li><i class="bi bi-youtube"></i></li>
