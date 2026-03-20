@@ -2,9 +2,12 @@ export default function AppHeader() {
 
 
     return (
+        /* Header */
         <header className="d-flex justify-content-center">
+            {/* Navbar */}
             <nav className="py-3">
 
+                {/* Navbar Item */}
                 <ul className="nav nav-pills">
                     <li className="nav-item">
                         <a href="./info" className="nav-link">Chi siamo?</a>
