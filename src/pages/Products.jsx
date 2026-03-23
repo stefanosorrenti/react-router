@@ -47,7 +47,7 @@ export default function Products() {
                     {products.map(product => (
 
                         /* AppCard component */
-                        <AppCard cardId={product.id} cardImg={product.image}
+                        <AppCard key={product.id} cardImg={product.image}
                             cardTitle={product.title} cardCategory={product.category}
                             cardDescrption={product.description} cardPrice={product.price}
                         />

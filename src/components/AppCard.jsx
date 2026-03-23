@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 
-export default function AppCard({ cardId, cardImg, cardTitle, cardCategory, cardDescrption, cardPrice }) {
+export default function AppCard({ cardImg, cardTitle, cardCategory, cardDescrption, cardPrice }) {
 
 
 
     return (
 
-        <Link key={cardId} className="card cards-sizing col-12 col-md-6 col-lg-4 bg-light position-relative text-decoration-none">
+        <Link to='/prodotti/:id' className="card cards-sizing col-12 col-md-6 col-lg-4 bg-light position-relative text-decoration-none">
             
             {/* Images */}
             <div className="img-box container my-3">
