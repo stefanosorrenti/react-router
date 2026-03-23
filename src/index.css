@@ -23,6 +23,16 @@ section.row h1 {
 
 }
 
+/* Loading circle */
+
+.loading-circle {
+    max-height: 100vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 
 /*--------HEADER--------*/

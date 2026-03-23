@@ -3,6 +3,7 @@ import { Navigate, useParams } from "react-router-dom"
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import AppLoading from "../components/AppLoading";
 
 export default function SingleProductPage() {
     //DATA
@@ -38,12 +39,7 @@ export default function SingleProductPage() {
     if(singleProduct === false) {
         
         return (
-            <main>
-                <div className="d-flex text-white justify-content-center align-items-center">
-                    <h1>CARICAMENTO IN CORSO...</h1>
-                </div>
-            </main>
-        
+           <AppLoading />
         )
         
     } 
@@ -84,7 +80,7 @@ export default function SingleProductPage() {
                 </section>
             </div>
             {/* SINGLE PRODUCT CARD */}
-
+            
         </main>
     )
 }
