@@ -133,6 +133,25 @@ img.product-logo  {
 
 
 
+/* Error Page */
+
+.error-div {
+    
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.error-div h1 {
+    color: red;
+}
+
+.error-div span {
+    color: white;
+    font-size: large;
+}
 
 /*--------MEDIA QUERY--------*/
 

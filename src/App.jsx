@@ -7,6 +7,7 @@ import MainPage from "./pages/MainPage";
 import InfoPage from "./pages/InfoPage";
 import Products from "./pages/Products";
 import SingleProductPage from "./pages/SingleProductPage";
+import ErrorPage from "./pages/ErrorPage";
 function App() {
 
 
@@ -21,7 +22,7 @@ function App() {
           <Route path="/info" element= { <InfoPage /> } />
           <Route path="/prodotti" element= { <Products /> } />
           <Route path="/prodotti/:id" element= { <SingleProductPage /> } />
-
+          <Route path="*" element = { <ErrorPage /> } />
         </Route>  
               
 
