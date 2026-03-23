@@ -102,6 +102,7 @@ figcaption {
 
 /* Card */
 
+
 .img-box {
     max-width: 200px;
     height: 200px;
@@ -114,7 +115,7 @@ figcaption {
     
 }
 
-div.cards-sizing button {
+.cards-sizing button {
     min-width: 65%;
 }
 

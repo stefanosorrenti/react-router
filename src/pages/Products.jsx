@@ -2,6 +2,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import AppCard from "../components/AppCard";
 export default function Products() {
     //DATA
@@ -41,6 +42,7 @@ export default function Products() {
             <div className="container">
                 <div className="row gap-3 justify-content-center">
 
+                    
                     {/* Dynamic Cards render */}
                     {products.map(product => (
 
@@ -50,6 +52,8 @@ export default function Products() {
                             cardDescrption={product.description} cardPrice={product.price}
                         />
                     ))}
+
+                    
                 </div>
             </div>
 

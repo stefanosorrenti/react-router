@@ -1,12 +1,13 @@
+import { Link } from "react-router-dom";
+
 export default function AppCard({ cardId, cardImg, cardTitle, cardCategory, cardDescrption, cardPrice }) {
 
 
 
     return (
 
-        /* Sigle Card */
-        <div key={cardId} className="card cards-sizing col-12 col-md-6 col-lg-4 bg-light position-relative">
-
+        <Link key={cardId} className="card cards-sizing col-12 col-md-6 col-lg-4 bg-light position-relative text-decoration-none">
+            
             {/* Images */}
             <div className="img-box container my-3">
                 <img src={cardImg} alt="" className="card-img-top" />
@@ -18,6 +19,7 @@ export default function AppCard({ cardId, cardImg, cardTitle, cardCategory, card
             </div>
 
             {/* Card Body */}
+            
             <div className="card-body p-5">
                 <h2 className="card-title fs-6">{cardTitle}</h2>
                 <span className="text-body-tertiary sfw-bold">{cardCategory.toUpperCase()}</span>
@@ -35,8 +37,9 @@ export default function AppCard({ cardId, cardImg, cardTitle, cardCategory, card
                 <button className="btn btn-success my-3">Acquista</button>
             </div>
 
-
-        </div>
+        </Link>
+       /* Single Card */
+        
 
     )
 }
