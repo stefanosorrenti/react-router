@@ -5,7 +5,7 @@ export default function AppCard({cardId, cardImg, cardTitle, cardCategory, cardD
 
 
     return (
-
+        //Tramite il componente Link rendo cliccabile come se fosse un tag 'a' l'intera pagina, soltanto che l'id dinamico corrisponde all'id della card cliccata.
         <Link to={`/prodotti/${cardId}`} className="card cards-sizing col-12 col-md-6 col-lg-4 bg-light position-relative text-decoration-none">
             
             {/* Images */}

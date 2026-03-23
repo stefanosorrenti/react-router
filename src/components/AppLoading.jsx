@@ -3,6 +3,7 @@ import { Commet } from "react-loading-indicators"
 export default function AppLoading() {
 
     return (
+        /* MAIN */
         <main>
 
             <div className="loading-circle">
