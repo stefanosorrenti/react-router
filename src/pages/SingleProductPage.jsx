@@ -1,29 +1,50 @@
 //IMPORTS
-import { useParams } from "react-router-dom"
+import { Navigate, useParams } from "react-router-dom"
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { main } from "@popperjs/core";
+import { useNavigate } from "react-router-dom";
 
 export default function SingleProductPage() {
     //DATA
     const { id } = useParams()
-
+    let navigate = useNavigate()
     //USE STATE
-
-
+    const [singleProduct, setSingleProduct] = useState({})
 
     //USE EFFECT
-    const [singleProduct, setSingleProduct] = useState({})
     useEffect(() => {
         axios.get(`https://fakestoreapi.com/products/${id}`)
             .then(res => {
-                console.log(res.data);
-                setSingleProduct(res.data)
-            })
+                //console.log(res.data);
+                
+                console.log(res.data.id)
+                console.log(Number(id));
+                if(Number(id) !== res.data.id) {
+                    console.log('Non uguali');
+                    navigate('/prodotti')
+                    
+                } else {
+                    setSingleProduct(res.data)
+                    
+                }
+                
+                
+                
+            }) 
+
+
     }, [])
+
+    
+
+ 
+    
+  
+
     return (
         /* Main */
         <main>
+            
             <div className="container">
                 {/* Single card section */}
                 <section className="row text-dark bg-white rounded">
@@ -36,7 +57,8 @@ export default function SingleProductPage() {
                             <img src={singleProduct.image} alt="Porduct Image" />
                         </div>
                     </div>
-
+                    
+                    
                     {/* Description */}
                     <div className="col-12 col-md-6 d-flex flex-column gap-2 py-2">
                         <span className="fw-bold fs-5">Descrizione:</span>
@@ -45,7 +67,7 @@ export default function SingleProductPage() {
                         <button className="btn btn-success buttonStyle">Acquista subito</button>
 
                     </div>
-
+                
                 </section>
             </div>
             {/* SINGLE PRODUCT CARD */}
