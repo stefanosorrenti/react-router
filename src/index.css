@@ -12,6 +12,10 @@ body {
     background-color: rgb(33, 37, 41);
 }
 
+section.row h1 {
+    font-size: 20px;
+}
+
 /*--------UTILITY--------*/
 
 .cards-sizing {
@@ -115,7 +119,7 @@ figcaption {
     
 }
 
-.cards-sizing button {
+.buttonStyle {
     min-width: 65%;
 }
 
@@ -128,3 +132,25 @@ img.product-logo  {
 }
 
 
+
+
+/*--------MEDIA QUERY--------*/
+
+
+/* Media query for single product card */
+
+@media screen and (min-width: 768px)  {
+
+    section.row h1 {
+        font-size: xx-large;
+    }
+    
+    section.row .img-box {
+        max-width: 500px;
+        height: 500px;
+    }
+
+    div.col-12.py-2 {
+        justify-content: center;
+    }
+}

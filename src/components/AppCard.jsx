@@ -34,7 +34,7 @@ export default function AppCard({cardId, cardImg, cardTitle, cardCategory, cardD
                 </ul>
 
                 {/* Buy button */}
-                <button className="btn btn-success my-3">Acquista</button>
+                <button className="btn buttonStyle my-3">Aggiungi al carrello</button>
             </div>
 
         </Link>

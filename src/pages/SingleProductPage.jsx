@@ -25,21 +25,28 @@ export default function SingleProductPage() {
         /* Main */
         <main>
             <div className="container">
-                <div className="row text-dark bg-white">
+                {/* Single card section */}
+                <section className="row text-dark bg-white rounded">
 
-                    <div className="col-12 text-center">
-                        <div className="img-box">
+                    {/* Image*/}
+                    <div className="col-12 col-md-6 text-center d-flex justify-content-center flex-column align-items-center ">
+
+                        <h1 className="my-3">{singleProduct.title}</h1>
+                        <div className="img-box my-3">
                             <img src={singleProduct.image} alt="Porduct Image" />
                         </div>
-                        <h1>{singleProduct.title}</h1>
                     </div>
 
-                    <div className="col-12">
-                        <p>{singleProduct.description}</p>
-                        <span>€{singleProduct.price}</span>
+                    {/* Description */}
+                    <div className="col-12 col-md-6 d-flex flex-column gap-2 py-2">
+                        <span className="fw-bold fs-5">Descrizione:</span>
+                        <p className="fs-5">{singleProduct.description}</p>
+                        <span className="text-danger fs-3 fw-bold align-self-center">€{singleProduct.price}</span>
+                        <button className="btn btn-success buttonStyle">Acquista subito</button>
+
                     </div>
 
-                </div>
+                </section>
             </div>
             {/* SINGLE PRODUCT CARD */}
 
