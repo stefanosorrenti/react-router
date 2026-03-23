@@ -9,7 +9,7 @@ export default function SingleProductPage() {
     const { id } = useParams()
     let navigate = useNavigate()
     //USE STATE
-    const [singleProduct, setSingleProduct] = useState({})
+    const [singleProduct, setSingleProduct] = useState(false)
 
     //USE EFFECT
     useEffect(() => {
@@ -17,8 +17,8 @@ export default function SingleProductPage() {
             .then(res => {
                 //console.log(res.data);
                 
-                console.log(res.data.id)
-                console.log(Number(id));
+                //console.log(res.data.id)
+                //console.log(Number(id));
                 if(Number(id) !== res.data.id) {
                     console.log('Non uguali');
                     navigate('/prodotti')
@@ -26,8 +26,8 @@ export default function SingleProductPage() {
                 } else {
                     setSingleProduct(res.data)
                     
+                    
                 }
-                
                 
                 
             }) 
@@ -35,8 +35,21 @@ export default function SingleProductPage() {
 
     }, [])
 
+    if(singleProduct === false) {
+        
+        return (
+            <main>
+                <div className="d-flex text-white justify-content-center align-items-center">
+                    <h1>CARICAMENTO IN CORSO...</h1>
+                </div>
+            </main>
+        
+        )
+        
+    } 
+        
+        
     
-
  
     
   
